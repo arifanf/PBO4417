@@ -10,10 +10,10 @@ package gameenvironment;
  * @author ASUS
  */
 public class GameEnemy {
-    double width = 0;
-    double height = 0;
-    int positionX = 0;
-    int positionY = 0;
+    private double width = 0;
+    private double height = 0;
+    private int positionX = 0;
+    private int positionY = 0;
 
     public GameEnemy() {
     }

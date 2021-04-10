@@ -15,7 +15,7 @@ class Mobil2 {
     }
 
     public void ubahGigi(int newGigi) {
-        gigi = gigi + newGigi;
+        gigi += newGigi;
     }
 }
 public class mobilDemo2 {

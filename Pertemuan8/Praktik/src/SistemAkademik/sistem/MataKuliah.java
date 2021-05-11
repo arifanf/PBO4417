@@ -21,16 +21,16 @@ public class MataKuliah extends Akademik {
         System.out.println("");
         System.out.println("");
         System.out.println("Input Mata Kuliah");
-        System.out.print("Masukkan Nama Mata kuliah   : ");
+        System.out.print("Masukkan Nama Mata kuliah\t: ");
         this.nama = str.nextLine();
-        System.out.print("Masukkan Semester Anda   : ");
+        System.out.print("Masukkan Semester Anda\t: ");
         this.semester = str.nextInt();
 
     }
 
     @Override
     public void show() {
-        System.out.println("Nomor ID \t\t: " + this.noId);
+        System.out.println("Nomor ID \t: " + this.noId);
         System.out.println("NIM \t\t: " + this.nama);
         System.out.println("Nama \t\t: " + this.semester);
     }

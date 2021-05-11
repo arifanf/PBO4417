@@ -23,9 +23,9 @@ public class NilaiMahasiswa extends Akademik {
         System.out.println("");
         System.out.println("");
         System.out.println("Input Nilai Mahasiswa");
-        System.out.print("Masukan Nama          :");
+        System.out.print("Masukan Nama \t\t\t\t: ");
         this.nama = str.nextLine();
-        System.out.print("Masukan Nilai Mata Kuliah Pokok \t: ");
+        System.out.print("Masukan Nilai Mata Kuliah Pokok \t\t: ");
         this.nPokok = str.nextInt();
         System.out.print("Masukan Nilai Mata Kuliah Tambahan \t: ");
         this.nTambahan = str.nextInt();
@@ -34,10 +34,10 @@ public class NilaiMahasiswa extends Akademik {
 
     @Override
     public void show() {
-        System.out.println("Nama       : " + this.nama);
-        System.out.println("Nilai UTS  : " + this.nPokok);
-        System.out.println("Nilai Tugas: " + this.nTambahan);
-        System.out.println("Nilai Akhir: " + this.nAkhir);
+        System.out.println("Nama \t\t\t\t: " + this.nama);
+        System.out.println("Nilai Mata Kuliah Pokok \t\t: " + this.nPokok);
+        System.out.println("Nilai Mata Kuliah Tambahan\t: " + this.nTambahan);
+        System.out.println("Nilai Akhir \t\t\t: " + this.nAkhir);
     }
     @Override
     public int getNoId() {

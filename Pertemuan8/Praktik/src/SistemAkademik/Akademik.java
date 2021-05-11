@@ -55,7 +55,7 @@ public abstract class Akademik implements SistemAkademik {
         
         while (menu != 10) {
             System.out.println("========================================");
-            System.out.print("Main Menu...\n1.Input Dosen\t\t2.Input Mahasiswa\n3.View Dosen\t\t4.View Mahasiswa\n5.Input Nilai\t\t6.Input Mata Kuliah\n7.Lihat Mata Kuliah\t8.Search Mahasiswa\n9.Pilih Mata Kuliah\t10.Exit\nMasukan Perintah 1:");
+            System.out.print("Main Menu...\n1.Input Dosen\t\t6.Input Mata Kuliah\n2.Input Mahasiswa\t7.Lihat Mata Kuliah\n3.View Dosen\t\t8.Search Mahasiswa\n4.View Mahasiswa\t\t9.Input Mata Kuliah Tambahan\n5.Input Nilai\t\t10.EXIT\nMasukan Perintah : ");
             menu = data[0].in.nextInt();
             if (menu == 1) {
                 //input dosen

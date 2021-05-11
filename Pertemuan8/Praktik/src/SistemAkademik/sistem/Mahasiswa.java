@@ -24,11 +24,11 @@ public class Mahasiswa extends Akademik {
         System.out.println("");
         System.out.println("");
         System.out.println("Input Data Mahasiswa");
-        System.out.print("Masukkan NIM \t: ");
+        System.out.print("Masukkan NIM \t\t: ");
         this.nim = str.nextLine();
-        System.out.print("Masukkan Nama \t: ");
+        System.out.print("Masukkan Nama \t\t: ");
         this.nama = str.nextLine();
-        System.out.print("Masukkan Jenis Kelamin : ");
+        System.out.print("Masukkan Jenis Kelamin \t: ");
         this.jenisKelamin = str.nextLine();
         this.role = "Mahasiswa";
     }

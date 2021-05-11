@@ -28,7 +28,7 @@ public class Dosen extends Akademik {
         this.nidn = str.nextLine();
         System.out.print("Masukkan Nama \t\t: ");
         this.nama = str.nextLine();
-        System.out.print("Masukkan Jenis Kelamin : ");
+        System.out.print("Masukkan Jenis Kelamin \t: ");
         this.jenisKelamin = str.nextLine();
         this.role = "Dosen";
     }

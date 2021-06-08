@@ -3,9 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/ASUS/Documents/GitHub/PBO4417/Pertemuan12/Praktek/DutaCoding/src/mvc/DAOInterface/InUser.java</file>
             <file>file:/C:/Users/ASUS/Documents/GitHub/PBO4417/Pertemuan12/Praktek/DutaCoding/src/mvc/Koneksi/Koneksi.java</file>
             <file>file:/C:/Users/ASUS/Documents/GitHub/PBO4417/Pertemuan12/Praktek/DutaCoding/src/mvc/DAOInterface/InAdmin.java</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/PBO4417/Pertemuan12/Praktek/DutaCoding/src/mvc/Model/User.java</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/PBO4417/Pertemuan12/Praktek/DutaCoding/src/mvc/Controller/ControllerAdmin.java</file>
+            <file>file:/C:/Users/ASUS/Documents/GitHub/PBO4417/Pertemuan12/Praktek/DutaCoding/src/mvc/DAO/DAOAdmin.java</file>
         </group>
     </open-files>
 </project-private>

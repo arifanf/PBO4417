@@ -21,7 +21,7 @@ public class TableModel extends AbstractTableModel {
     
     @Override
     public int getColumnCount() {
-        return 6;
+        return 7;
     }
     
     public int getRowCount() {
@@ -32,16 +32,18 @@ public class TableModel extends AbstractTableModel {
     public String getColumnName(int column) {
         switch (column) {
             case 0:
-                return "NO KTP/KK";
+                return "NO";
             case 1:
-                return "NAMA";
+                return "NO KTP/KK";
             case 2:
-                return "JENIS KELAMIN";
+                return "NAMA";
             case 3:
-                return "ALAMAT";
+                return "JENIS KELAMIN";
             case 4:
-                return "USIA";
+                return "ALAMAT";
             case 5:
+                return "USIA";
+            case 6:
                 return "ALASAN";
             default:
                 return null;
@@ -52,16 +54,18 @@ public class TableModel extends AbstractTableModel {
     public Object getValueAt(int row, int column) {
         switch (column) {
             case 0:
-                return listData.get(row).getId();
+                return listData.get(row).getUserId();
             case 1:
-                return listData.get(row).getName();
+                return listData.get(row).getId();
             case 2:
-                return listData.get(row).getGender();
+                return listData.get(row).getName();
             case 3:
-                return listData.get(row).getAddress();
+                return listData.get(row).getGender();
             case 4:
-                return listData.get(row).getAge();
+                return listData.get(row).getAddress();
             case 5:
+                return listData.get(row).getAge();
+            case 6:
                 return listData.get(row).getReason();
             default:
                 return null; 

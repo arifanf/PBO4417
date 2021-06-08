@@ -6,20 +6,11 @@
 package mvc.View;
 
 import mvc.Controller.ControllerMahasiswa;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
 import javax.swing.JButton;
-import javax.swing.JOptionPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import javax.swing.JTextArea;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
-import javax.swing.text.*;
 
 /**
  *
@@ -71,7 +62,6 @@ public class FormMahasiswa extends javax.swing.JFrame {
 
         jLabel1.setText("ID");
 
-        txtID.setEnabled(false);
         txtID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtIDActionPerformed(evt);

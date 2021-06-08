@@ -25,8 +25,8 @@ import java.util.logging.Logger;
 public class DAOAdmin implements InAdmin {
     Connection connection;
     final String insert = "INSERT INTO tbl_pendaftaran (id, nama, jk, alamat, usia, alasan) VALUES (?, ?, ?, ?, ?, ?);";
-    final String update = "UPDATE tbl_pendaftaran set id=?, nama=?, jk=?, alamat=?, usia=?, alasan=? where id=?;";
-    final String delete = "DELETE FROM tbl_pendaftaran where id=?;";
+    final String update = "UPDATE tbl_pendaftaran set id=?, nama=?, jk=?, alamat=?, usia=?, alasan=? where no=?;";
+    final String delete = "DELETE FROM tbl_pendaftaran where no=?;";
     final String select = "SELECT * FROM tbl_pendaftaran;";
     
     public DAOAdmin() {
@@ -37,17 +37,17 @@ public class DAOAdmin implements InAdmin {
         PreparedStatement statement = null;
         try {
             statement = connection.prepareStatement(insert);
-            statement.setString(1, data.getName());
-            statement.setString(2, data.getGender());
-            statement.setString(3, data.getAddress());
-            statement.setString(4, data.getReason());
+            statement.setString(1, data.getId());
+            statement.setString(2, data.getName());
+            statement.setString(3, data.getGender());
+            statement.setString(4, data.getAddress());
             statement.setInt(5, data.getAge());
-            statement.setInt(6, data.getId());
+            statement.setString(6, data.getReason());
             statement.executeUpdate();
-//            ResultSet rs = statement.getGeneratedKeys();
-//            while (rs.next()) {
-//                data.setId(rs.getInt(1));
-//            }
+            ResultSet rs = statement.getGeneratedKeys();
+            while (rs.next()) {
+                data.setUserId(rs.getInt(1));
+            }
         } catch (SQLException ex) {
             System.out.println("Anda Berhasil Menginputkan Data");
         } finally {
@@ -63,12 +63,13 @@ public class DAOAdmin implements InAdmin {
         PreparedStatement statement = null;
         try {
             statement = connection.prepareStatement(update);
-            statement.setString(1, data.getName());
-            statement.setString(2, data.getGender());
-            statement.setString(3, data.getAddress());
-            statement.setString(4, data.getReason());
-            statement.setInt(5, data.getId());
-            statement.setInt(6, data.getAge());
+            statement.setString(1, data.getId());
+            statement.setString(2, data.getName());
+            statement.setString(3, data.getGender());
+            statement.setString(4, data.getAddress());
+            statement.setInt(5, data.getAge());
+            statement.setString(6, data.getReason());
+            statement.setInt(7, data.getUserId());
             statement.executeUpdate();
         } catch (SQLException ex) {
             System.out.println("Anda Berhasil Memperbarui Data");
@@ -81,11 +82,11 @@ public class DAOAdmin implements InAdmin {
         }
     }
     
-    public void delete(int id) {
+    public void delete(int userId) {
         PreparedStatement statement = null;
         try {
             statement = connection.prepareStatement(delete);
-            statement.setInt(1, id);
+            statement.setInt(1, userId);
             statement.executeUpdate();
         } catch (SQLException ex) {
             System.out.println("Anda Berhasil Menghapus Data");
@@ -106,7 +107,8 @@ public class DAOAdmin implements InAdmin {
             ResultSet rs = st.executeQuery(select);
             while (rs.next()) {                
                 User x = new User();
-                x.setId(rs.getInt("id"));
+                x.setUserId(rs.getInt("no"));
+                x.setId(rs.getString("id"));
                 x.setName(rs.getString("nama"));
                 x.setGender(rs.getString("jk"));
                 x.setAddress(rs.getString("alamat"));

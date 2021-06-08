@@ -44,7 +44,8 @@ public class ControllerAdmin {
     }
     
     public void fillField(int row) {
-        frame.getTxtId().setText(listData.get(row).getId().toString());
+        frame.getTxtUserId().setText(listData.get(row).getUserId().toString());
+        frame.getTxtId().setText(listData.get(row).getId());
         frame.getTxtName().setText(listData.get(row).getName());
         frame.getTxtGender().setSelectedItem(listData.get(row).getGender());
         frame.getTxtAddress().setText(listData.get(row).getAddress());
@@ -53,14 +54,15 @@ public class ControllerAdmin {
     }
     
     public void update() {
-        if (!frame.getTxtId().getText().trim().isEmpty()) {
+        if (!frame.getTxtUserId().getText().trim().isEmpty()& !frame.getTxtName().getText().trim().isEmpty()) {
             User x = new User();
-            x.setId(Integer.parseInt(frame.getTxtId().getText()));
+            x.setId(frame.getTxtId().getText());
             x.setName(frame.getTxtName().getText());
             x.setGender(frame.getTxtGender().getSelectedItem().toString());
             x.setAddress(frame.getTxtAddress().getText());
             x.setAge(Integer.parseInt(frame.getTxtAge().getText()));
             x.setReason(frame.getTxtReason().getText());
+            x.setUserId(Integer.parseInt(frame.getTxtUserId().getText()));
             implAdmin.update(x);
             JOptionPane.showMessageDialog(null, "Update Data Sukses");
         } else {
@@ -69,9 +71,9 @@ public class ControllerAdmin {
     }
     
     public void delete() {
-        if (!frame.getTxtId().getText().trim().isEmpty()) {
-            int id = Integer.parseInt(frame.getTxtId().getText());
-            implAdmin.delete(id);
+        if (!frame.getTxtUserId().getText().trim().isEmpty()) {
+            int userId = Integer.parseInt(frame.getTxtUserId().getText());
+            implAdmin.delete(userId);
             JOptionPane.showMessageDialog(null, "Hapus Data Sukses");
         } else {
             JOptionPane.showMessageDialog(frame, "Pilih Data yang akan dihapus");

@@ -30,7 +30,8 @@ public class MenuForm extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         buttonInsert = new javax.swing.JButton();
-        buttonReset = new javax.swing.JButton();
+        buttonClose = new javax.swing.JButton();
+        buttonReset1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Form Pendaftaran");
@@ -57,13 +58,23 @@ public class MenuForm extends javax.swing.JFrame {
             }
         });
 
-        buttonReset.setBackground(new java.awt.Color(102, 255, 255));
-        buttonReset.setFont(new java.awt.Font("Robaga Rounded", 0, 12)); // NOI18N
-        buttonReset.setForeground(new java.awt.Color(0, 204, 153));
-        buttonReset.setText("Daftar");
-        buttonReset.addActionListener(new java.awt.event.ActionListener() {
+        buttonClose.setBackground(new java.awt.Color(102, 255, 255));
+        buttonClose.setFont(new java.awt.Font("Robaga Rounded", 0, 12)); // NOI18N
+        buttonClose.setForeground(new java.awt.Color(0, 204, 153));
+        buttonClose.setText("Exit");
+        buttonClose.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonResetActionPerformed(evt);
+                buttonCloseActionPerformed(evt);
+            }
+        });
+
+        buttonReset1.setBackground(new java.awt.Color(102, 255, 255));
+        buttonReset1.setFont(new java.awt.Font("Robaga Rounded", 0, 12)); // NOI18N
+        buttonReset1.setForeground(new java.awt.Color(0, 204, 153));
+        buttonReset1.setText("Daftar");
+        buttonReset1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonReset1ActionPerformed(evt);
             }
         });
 
@@ -75,16 +86,17 @@ public class MenuForm extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(40, 40, 40)
-                                .addComponent(jLabel4))))
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(79, 79, 79)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(buttonInsert, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(buttonReset, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(67, 67, 67)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(13, 13, 13)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(buttonInsert, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(buttonClose, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(buttonReset1, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE))))))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -92,13 +104,15 @@ public class MenuForm extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(27, 27, 27)
                 .addComponent(jLabel1)
-                .addGap(51, 51, 51)
+                .addGap(32, 32, 32)
                 .addComponent(jLabel4)
                 .addGap(18, 18, 18)
                 .addComponent(buttonInsert, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(buttonReset, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addGap(32, 32, 32)
+                .addComponent(buttonReset1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(buttonClose, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(69, Short.MAX_VALUE))
         );
 
         pack();
@@ -111,12 +125,17 @@ public class MenuForm extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_buttonInsertActionPerformed
 
-    private void buttonResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonResetActionPerformed
+    private void buttonCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCloseActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_buttonCloseActionPerformed
+
+    private void buttonReset1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonReset1ActionPerformed
         // TODO add your handling code here:
         UserForm uf = new UserForm();
         uf.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_buttonResetActionPerformed
+    }//GEN-LAST:event_buttonReset1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -157,8 +176,9 @@ public class MenuForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buttonClose;
     private javax.swing.JButton buttonInsert;
-    private javax.swing.JButton buttonReset;
+    private javax.swing.JButton buttonReset1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables

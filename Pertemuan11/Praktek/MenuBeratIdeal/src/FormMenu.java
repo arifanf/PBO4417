@@ -79,6 +79,8 @@ public class FormMenu extends javax.swing.JFrame {
     private void buttonExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonExitActionPerformed
         // TODO add your handling code here:
         System.exit(0);
+//        this.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+//        this.dispose();
     }//GEN-LAST:event_buttonExitActionPerformed
 
     /**

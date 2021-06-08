@@ -12,16 +12,30 @@ package mvc.Model;
 public class User {
 
     /**
+     * @return the userId
+     */
+    public Integer getUserId() {
+        return userId;
+    }
+
+    /**
+     * @param userId the userId to set
+     */
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    /**
      * @return the id
      */
-    public Integer getId() {
+    public String getId() {
         return id;
     }
 
     /**
      * @param id the id to set
      */
-    public void setId(Integer id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -95,7 +109,8 @@ public class User {
         this.reason = reason;
     }
 
-    private Integer id;
+    private Integer userId;
+    private String id;
     private String name;
     private String gender;
     private String address;

@@ -15,6 +15,6 @@ import mvc.Model.*;
 public interface InAdmin {
     public void insert(User data);
     public void update(User data);
-    public void delete(int id);
+    public void delete(int userId);
     public List<User> getAll();
 }

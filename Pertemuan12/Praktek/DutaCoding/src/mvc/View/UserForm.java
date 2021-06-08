@@ -159,6 +159,10 @@ public class UserForm extends javax.swing.JFrame {
             }
         });
 
+        txtUserId.setEditable(false);
+        txtUserId.setFont(new java.awt.Font("Robaga Rounded", 2, 11)); // NOI18N
+        txtUserId.setForeground(new java.awt.Color(0, 204, 153));
+        txtUserId.setText("Auto");
         txtUserId.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtUserIdActionPerformed(evt);
